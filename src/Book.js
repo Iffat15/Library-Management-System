@@ -5,6 +5,7 @@ class Book {
       this.author = author;
       this.year = year;
       this.isAvailable = true;
+      
     }
   }
   
