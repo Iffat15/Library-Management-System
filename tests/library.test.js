@@ -25,4 +25,11 @@ describe('Library Management System', () => {
     });
 
 
+  test('should allow returning a borrowed book', () => {
+    library.addBook(book);
+    library.borrowBook('123456789');
+    library.returnBook('123456789');
+    expect(library.viewAvailableBooks().length).toBe(1);
+   });
+
 });
