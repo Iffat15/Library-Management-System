@@ -15,4 +15,10 @@ describe('Library Management System', () => {
     expect(library.viewAvailableBooks().length).toBe(1);
     expect(library.viewAvailableBooks()[0].title).toBe('Clean Code');
   });
+    test('should allow borrowing an available book', () => {
+    library.addBook(book);
+    expect(library.borrowBook('123456789')).toBe(true);
+    expect(library.viewAvailableBooks().length).toBe(0);
+  });
+
 });
